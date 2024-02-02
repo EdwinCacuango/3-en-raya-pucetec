@@ -1,0 +1,22 @@
+def imprimir_tablero (posiciones):
+    print("+----------+----------+----------+")
+    print("|          |          |          |")
+    print("|          |          |          |")
+    print(f"|     {posiciones[0][0]}    |     {posiciones[0][1]}    |    {posiciones[0][2]}     |")
+    print("|          |          |          |")
+    print("|          |          |          |")
+    print("+----------+----------+----------+")
+    # Segunda fila
+    print("|          |          |          |")
+    print("|          |          |          |")
+    print(f"|     {posiciones[1][0]}    |     {posiciones[1][1]}    |    {posiciones[1][2]}     |")
+    print("|          |          |          |")
+    print("|          |          |          |")
+    print("+----------+----------+----------+")
+    #tercera fila
+    print("|          |          |          |")
+    print("|          |          |          |")
+    print(f"|     {posiciones[2][0]}    |     {posiciones[2][1]}    |    {posiciones[2][2]}     |")
+    print("|          |          |          |")
+    print("|          |          |          |")
+    print("+----------+----------+----------+")
