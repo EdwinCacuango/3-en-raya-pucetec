@@ -1,7 +1,7 @@
 def buscar_filas(posiciones):
     for i in range(3):
         if posiciones[i][0] == posiciones[i][1] == posiciones[i][2]:
-            return f"{posiciones[i][0]}"   
+            return f"{posiciones[i][0]}"
 
 def buscar_columnas(posiciones):
     for i in range(3):
@@ -19,21 +19,30 @@ def buscar_diagonales(posiciones):
         elif posiciones[i][i] =="O":
             counter_o +=1
 
-    
+
     if counter_o == 3:
         return "O"
     elif counter_x == 3:
         return "X"
-    elif posiciones[0][2] == posiciones[1][1] == posiciones [3][0]:
+    elif posiciones[0][2] == posiciones[1][1] == posiciones [2][0]:
         return posiciones [0][2]
     else:
         return "Sigue participando"
 
 def buscar_empate(posiciones):
-    for item in posiciones:
-        if item is not int:
-            return "Empate - Juego finalizado"
-        
+    def contains_number(matriz):
+        for i in range(3):
+            for j in range(3):
+                if type(matriz[i][j]) == int:
+                    return True
+        return False
+
+
+    if contains_number(posiciones) is True:
+        return False
+    else:
+        return True
+
 def buscar_ganador(posiciones):
     if not posiciones:
         return False
@@ -42,9 +51,7 @@ def buscar_ganador(posiciones):
         return "La PC ha ganado"
     elif buscar_filas(posiciones) == "O" or buscar_columnas(posiciones) == "O" or buscar_diagonales(posiciones) == "O":
         return "Felicidades, ha ganado"
-    elif "Empate" in buscar_empate(posiciones):
+    elif buscar_empate(posiciones) is True:
         return "EMPATE - Fin del juego"
     else:
         return False
-
-
