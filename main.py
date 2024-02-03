@@ -28,13 +28,7 @@ while answer is False:
         print(answer)
         imprimir_tablero(posiciones)
         break
-
-
-
-
-
-
-
-
-
-
+    elif answer is not False and "EMPATE" in answer:
+        print(answer)
+        imprimir_tablero(posiciones)
+        break
