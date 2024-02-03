@@ -24,7 +24,7 @@ def buscar_diagonales(posiciones):
         return "O"
     elif counter_x == 3:
         return "X"
-    elif posiciones[0][2] == posiciones[1][1] == posiciones [3][0]:
+    elif posiciones[0][2] == posiciones[1][1] == posiciones [2][0]:
         return posiciones [0][2]
     else:
         return "Sigue participando"
@@ -42,8 +42,8 @@ def buscar_ganador(posiciones):
         return "La PC ha ganado"
     elif buscar_filas(posiciones) == "O" or buscar_columnas(posiciones) == "O" or buscar_diagonales(posiciones) == "O":
         return "Felicidades, ha ganado"
-    elif "Empate" in buscar_empate(posiciones):
-        return "EMPATE - Fin del juego"
+    # elif "Empate" in buscar_empate(posiciones):
+    #     return "EMPATE - Fin del juego"
     else:
         return False
 
